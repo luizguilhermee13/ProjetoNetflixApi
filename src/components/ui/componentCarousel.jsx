@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import { Routes, Route, Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card"; //outro component o shadcn que tive que importar p/usar aqui
 import {
   Carousel,
@@ -41,11 +41,13 @@ export default function CarouselSize({ genero }) {
                     key={index}
                     className="text-2xl font-semibold w-full h-full "
                   >
-                    <h2 className="flex justify-center m-0">{genero.name}</h2>
-                    <img
-                      src={image[index]}
-                      className="w-full h-[200px] object-cover rounded-lg"
-                    />
+                    <Link to={`/CategoriaSelecionada/${genero.id}`}>
+                      <h2 className="flex justify-center m-0">{genero.name}</h2>
+                      <img
+                        src={image[index]}
+                        className="w-full h-[200px] object-cover rounded-lg"
+                      />
+                    </Link>
                   </div>
                 </CardContent>
               </Card>

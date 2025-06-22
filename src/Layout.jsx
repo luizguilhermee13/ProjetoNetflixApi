@@ -6,12 +6,11 @@ import SearchPage from "./pages/search";
 import CategotyPage from "./pages/category";
 import FavoritePage from "./pages/favorite";
 import ContatoPage from "./pages/contact";
+import CategoriaSelecionada from "./pages/categorySelected";
+import MovieSelected from "./pages/movieSolo";
 
 //o componente que eu quero que renderize, com um children, pois a sidebar  solicita que venha com um parametro children
 export default function Layout({ children }) {
-  const SIDEBAR_WIDTH = "16rem"; //para alterar o width da sidebar
-  const SIDEBAR_WIDTH_MOBILE = "18rem"; //para alterar o width da sidebar
-
   return (
     <SidebarProvider
       style={{
@@ -27,6 +26,12 @@ export default function Layout({ children }) {
             <Route path="/" element={<HomePage />} />
             <Route path="/SearchPage" element={<SearchPage />} />
             <Route path="/CategotyPage" element={<CategotyPage />} />
+            <Route
+              path="/CategoriaSelecionada/:id"
+              element={<CategoriaSelecionada />}
+            />
+            <Route path="/MovieSelected/:id" element={<MovieSelected />} />
+
             <Route path="/FavoritePage" element={<FavoritePage />} />
             <Route path="/ContatoPage" element={<ContatoPage />} />
           </Routes>
