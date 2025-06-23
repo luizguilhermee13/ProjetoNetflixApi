@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Routes, Route, Link } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card"; //outro component o shadcn que tive que importar p/usar aqui
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -9,9 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-//generos está trazendo dados da genres da api, pois estou fazendo a solicitação no arquivo category e trazendo p/cá
 export default function CarouselSize({ genero }) {
-  //array rsponsavel pelas imagens nos cars
   const image = [
     "/assets/hxh.jpg",
     "/assets/Naruto.jpg",

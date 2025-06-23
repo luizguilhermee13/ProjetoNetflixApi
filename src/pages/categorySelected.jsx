@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { Routes, Route, Link } from "react-router-dom";
-import { useState } from "react"; //hook
-import { useEffect } from "react"; //hook
+import { useState } from "react";
+import { useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function CategoriaSelecionada() {
@@ -23,15 +23,15 @@ export default function CategoriaSelecionada() {
         `https://api.themoviedb.org/3/discover/movie?with_genres=${id}&language=pt-BR`,
         options
       )
-        .then((res) => res.json()) //convertendo para json
+        .then((res) => res.json())
         .then((res) => {
-          setTeste(res.results); //pegando os generos da api e passando para a minha variavel genero
+          setTeste(res.results);
         })
 
         .catch((err) => console.error(err));
     }
 
-    teste2(); //chamando a função que chama a api
+    teste2();
   }, [id]);
 
   return (
@@ -56,9 +56,3 @@ export default function CategoriaSelecionada() {
     </div>
   );
 }
-
-/*     <Link to={"pages/CategotyPage"}>
-        <button className="bg-slate-400 rounded-3xl text-xl p-1 px-4 fixed left-[1250px] top-[550px]">
-          voltar
-        </button>
-      </Link> */

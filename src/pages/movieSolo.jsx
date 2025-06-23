@@ -18,15 +18,15 @@ export default function MovieSelected() {
   useEffect(() => {
     function filmeSelecionado() {
       fetch(`https://api.themoviedb.org/3/movie/${id}?language=pt-BR`, options)
-        .then((res) => res.json()) //convertendo para json
+        .then((res) => res.json())
         .then((res) => {
-          setFilme(res); //pegando os generos da api e passando para a minha variavel genero
+          setFilme(res);
         })
 
         .catch((err) => console.error(err));
     }
 
-    filmeSelecionado(); //chamando a função que chama a api
+    filmeSelecionado();
   }, [id]);
 
   return (
@@ -45,3 +45,5 @@ export default function MovieSelected() {
     </div>
   );
 }
+
+/* */

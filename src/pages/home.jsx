@@ -39,7 +39,7 @@ function Header() {
 function Main() {
   return (
     <div className=" w-full h-full flex justify-center items-center ">
-      <div className="bg-transparent border border-gray-400  p-2 h-80 rounded-md ">
+      <div className="bg-transparent shadow-2xl p-2 h-80 rounded-md ">
         <div className="flex flex-col  justify-around h-full ">
           <p className="text-[3em]">
             Filmes, séries e muito mais. Sem limites.
@@ -64,6 +64,3 @@ function Main() {
     </div>
   );
 }
-
-
-//C:\Users\User\Desktop\codiacademy\praticandoReact\NetflixMovies>   

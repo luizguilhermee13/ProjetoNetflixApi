@@ -1,12 +1,9 @@
 import CarouselSize from "@/components/ui/componentCarousel"; //trazendo o corousel do shadcn para o arquivo
 import { useState } from "react"; //hook
-import { useEffect } from "react"; //hook
+import { useEffect } from "react"; //
 
 export default function CategotyPage() {
-  /*variavel genero na qual estou utilizando useState para trabalhar com o estado da variavel, assim,
-  conseguindo alterar o valor dela*/
   const [genero, setGenero] = useState([]);
-  // a variavel option é utilizada para validação da api, pois é com ela que faço uso da chave de acesso por exemplo
   const options = {
     method: "GET",
     headers: {
@@ -16,22 +13,21 @@ export default function CategotyPage() {
     },
   };
 
-  //utilizei um hook useEffect chamando [] vazio para chamar api e carregar apenas uma vez quando for alterado alguma coisa
   useEffect(() => {
     function chamandoApi() {
       fetch(
         "https://api.themoviedb.org/3/genre/movie/list?language=pt-br",
         options
       )
-        .then((res) => res.json()) //convertendo para json
+        .then((res) => res.json())
         .then((res) => {
-          setGenero(res.genres); //pegando os generos da api e passando para a minha variavel genero
+          setGenero(res.genres);
         })
 
         .catch((err) => console.error(err));
     }
 
-    chamandoApi(); //chamando a função que chama a api
+    chamandoApi();
   }, []);
 
   return (
