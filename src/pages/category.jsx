@@ -1,6 +1,6 @@
 import CarouselSize from "@/components/ui/componentCarousel"; //trazendo o corousel do shadcn para o arquivo
-import { useState } from "react"; //hook
-import { useEffect } from "react"; //
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function CategotyPage() {
   const [genero, setGenero] = useState([]);
@@ -42,14 +42,9 @@ export default function CategotyPage() {
     </div>
   );
 }
-/*<div className="w-full flex flex-col justify-center items-center gap-2 my-2">
-          {genero.map((genero, index) => (
-            <CarouselSize key={index} genero={genero}></CarouselSize>
-          ))}
-        </div>
-        
-Nesse trecho, estou utilizando um map para percorrer os gêneros da API e renderizar em carouselSize. Visto que o 
-índice e o gênero estão como parâmetro para a função carouselSize, que cria os cards shadcn na tela. Pois, em 
-carouselSize, eu crio os cards e peço para renderizar em categoryPage.Por serem 19 gêneros, vai passar por esses 19, 
-criando 19 
+/*Endpoint usado
+https://api.themoviedb.org/3/genre/movie/list
+
+link
+https://developer.themoviedb.org/reference/genre-movie-list
  */

@@ -14,8 +14,8 @@ export default function Layout({ children }) {
   return (
     <SidebarProvider
       style={{
-        "--sidebar-width": "18rem", //para alterar o width da sidebar
-        "--sidebar-width-mobile": "30rem", //para alterar o width da sidebar
+        "--sidebar-width": "16rem", //para alterar o width da sidebar
+        "--sidebar-width-mobile": "16rem", //para alterar o width da sidebar
       }}
     >
       <AppSidebar />

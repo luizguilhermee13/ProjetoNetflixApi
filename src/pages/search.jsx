@@ -1,13 +1,12 @@
 import { useState } from "react";
-import { useEffect } from "react";
 
 export default function SearchPage() {
   const [searchInput, setSearchInput] = useState("");
   const [filmes, setFilmes] = useState([]);
 
-  const valorDigitado = (event) => setSearchInput(event.target.value);
+  const inputValue = (event) => setSearchInput(event.target.value);
 
-  function PegandoValor(event) {
+  function Pesquisando(event) {
     event.preventDefault();
 
     const options = {
@@ -29,7 +28,7 @@ export default function SearchPage() {
   }
 
   return (
-    <div className="bg-red-800 max-w-screen-xl h-auto  my-2 p-2 text-white flex flex-col ">
+    <div className="bg-gradient-to-t from-red-800 to-red-600 max-w-screen-xl h-auto  my-2 p-2 text-white flex flex-col ">
       <div className="w-full h-[30%] border border-red-900">
         <form className="h-full flex flex-col items-center justify-center text-4xl gap-10 shadow-md p-2">
           <div>
@@ -39,18 +38,18 @@ export default function SearchPage() {
             <input
               className="rounded-xl p-2 mx-4 text-black"
               type="text"
-              placeholder="Digite o nome do filme"
-              onChange={valorDigitado}
+              placeholder="Procure o filme"
+              onChange={inputValue}
             />
             <button
-              className="bg-slate-800 p-2 rounded-xl"
-              onClick={PegandoValor}
+              className="bg-slate-800 p-2 rounded-xl shadow-lg hover:bg-slate-400 hover:text-slate-900"
+              onClick={Pesquisando}
             >
               Pesquisar
             </button>
           </div>
         </form>
-        <div className="grid grid-cols-4 my-2">
+        <div className="grid grid-cols-4 my-2 gap-4 ">
           {filmes.map((filme, index) => (
             <ExibindoPesquisa key={index} filme={filme} />
           ))}
@@ -62,7 +61,7 @@ export default function SearchPage() {
 
 function ExibindoPesquisa({ filme }) {
   return (
-    <div className="flex flex-col w-60 justify-center items-center gap-2 p-1 shadow-lg">
+    <div className="flex flex-col w-60 justify-center items-center gap-1 p-2 shadow-sm shadow-black rounded-lg">
       <h2>{filme.title}</h2>
       <img
         className="h-40"

@@ -1,9 +1,9 @@
 import {
-  Calendar,
+  Tags,
   Home,
-  Inbox,
+  Mail,
   Search,
-  Settings,
+  Heart,
   Link as LinkIcon,
 } from "lucide-react";
 
@@ -35,17 +35,17 @@ const items = [
   {
     title: "Categorias",
     url: "/CategotyPage",
-    icon: Inbox,
+    icon: Tags,
   },
   {
     title: "Favoritos",
     url: "/FavoritePage",
-    icon: Search,
+    icon: Heart,
   },
   {
     title: "Contato",
     url: "/ContatoPage",
-    icon: Settings,
+    icon: Mail,
   },
 ];
 
