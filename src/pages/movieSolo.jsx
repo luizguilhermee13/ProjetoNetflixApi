@@ -30,17 +30,19 @@ export default function MovieSelected() {
   }, [id]);
 
   return (
-    <div className="bg-slate-500 w-full h-full">
-      <div className="flex flex-col h-full items-center justify-evenly p-4">
-        <h1 className="text-3xl">{filme.title}</h1>
-        <img
-          src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
-          alt={filme.title}
-          className="rounded-lg w-[200px] my-2"
-        />
-        <span>{filme.overview}</span>
-        <p> Lançamento: {filme.release_date}</p>
-        <p>onde acessar: {filme.homepage}</p>
+    <div className="bg-gradient-to-t from-zinc-700 to-zinc-800 text-white  w-full h-full">
+      <div className="flex flex-col h-full items-center justify-evenly p-4 ">
+        <div className="shadow-sm shadow-red-700 flex flex-col items-center flex-wrap p-4 leading-relaxed bg-red-900">
+          <h1 className="text-3xl">{filme.title}</h1>
+          <img
+            src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
+            alt={filme.title}
+            className="rounded-lg w-[200px] my-2"
+          />
+          <span>{filme.overview}</span>
+          <p> Lançamento: {filme.release_date}</p>
+          <p>onde acessar: {filme.homepage}</p>
+        </div>
       </div>
     </div>
   );

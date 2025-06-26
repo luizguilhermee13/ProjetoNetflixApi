@@ -35,15 +35,19 @@ export default function CategoriaSelecionada() {
   }, [id]);
 
   return (
-    <div className="w-[80%] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto gap-4">
+    <div
+      className={`w-full h-full grid justify-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-auto gap-4
+    bg-gradient-to-t from-zinc-700 to-zinc-800`}
+    >
       {teste.map((teste, index) => (
         <div key={index} teste={teste} className="w-full h-full">
-          <Card className="w-[200px] h-full">
-            <CardContent className=" p-2">
-              <div className="checando text-2xl font-semibold w-full h-full ">
+          <Card className="w-[180px] h-[240px]  bg-red-800 shadow-lg text-white border-none">
+            <CardContent className="flex aspect-square items-center justify-center p-1  ">
+              <div className="flex flex-col justify-center text-2xl font-semibold w-full h-full ">
                 <Link to={`/MovieSelected/${teste.id}`}>
-                  <h2>{teste.title}</h2>
+                  <h2 className="text-xl">{teste.title}</h2>
                   <img
+                    className="h-full w-full rounded-xl bg-cover pb-1"
                     src={`https://image.tmdb.org/t/p/w500${teste.backdrop_path}`}
                     alt={teste.original_title}
                   />

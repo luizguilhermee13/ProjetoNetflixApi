@@ -41,13 +41,11 @@ function Header() {
 
 function Main() {
   return (
-    <div className=" w-full h-full flex justify-center items-center leading-relaxed ">
+    <div className=" w-full h-full flex flex-col md:flex-rowjustify-center items-center leading-relaxed  ">
       <div className="bg-transparent shadow-xl shadow-black p-2 h-80 rounded-md ">
-        <div className="flex flex-col  justify-around h-full ">
-          <p className="text-[3em]">
-            Filmes, séries e muito mais. Sem limites.
-          </p>
-          <p className="text-[2em]">
+        <div className="flex flex-col  justify-around h-full w-[90%] md:w-full ">
+          <p className="text-4xl">Filmes, séries e muito mais. Sem limites.</p>
+          <p className="text-2xl">
             Assista onde quiser. Cancele quando quiser.
           </p>
           <p className="text-xl">
@@ -55,7 +53,11 @@ function Main() {
             assinatura.
           </p>
           <form className="flex justify-center text-[2.6em]">
-            <input type="text" placeholder="Digite seu E-mail" />
+            <input
+              type="text"
+              placeholder="Digite seu E-mail"
+              className="w-[80%] sm:w-full"
+            />
             <input
               className="bg-red-600 px-1 rounded-r-md"
               type="button"

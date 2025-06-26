@@ -52,12 +52,12 @@ export default function CarouselSize({ genero }) {
         {filmeCategoria.slice(0, 10).map((filme, index) => (
           <CarouselItem
             key={filme.id || index}
-            className="md:basis-1/3 lg:basis-1/4"
+            className="md:basis-1/3 lg:basis-1/4 "
           >
             <div className="p-1">
-              <Card className="w-[180px] h-[240px]">
-                <CardContent className="flex aspect-square items-center justify-center p-1 shadow-lg">
-                  <div className="  w-full h-[200px] p-1">
+              <Card className="w-[180px] h-[240px]  bg-red-800 shadow-lg text-white border-none">
+                <CardContent className="flex aspect-square items-center justify-center p-1  ">
+                  <div className="  w-full h-[200px] ">
                     <Link to={`/CategoriaSelecionada/${genero.id}`}>
                       <h2 className="flex justify-center m-0 text-2xl font-semibold mb-1">
                         {genero.name}

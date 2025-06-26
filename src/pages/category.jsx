@@ -31,9 +31,15 @@ export default function CategotyPage() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center w-full h-full bg-orange-300">
+    <div
+      className={`flex flex-col justify-center items-center w-full  h-full 
+    bg-gradient-to-t from-zinc-700 to-zinc-800 text-white`}
+    >
       <div className="w-full">
-        <div className="w-full flex flex-col justify-center items-center gap-2 my-2">
+        <div className="w-full flex justify-center">
+          <h1>Generos</h1>
+        </div>
+        <div className="w-full flex flex-col justify-center items-center gap-2 my-2 text-black">
           {genero.map((genero, index) => (
             <CarouselSize key={index} genero={genero}></CarouselSize>
           ))}
